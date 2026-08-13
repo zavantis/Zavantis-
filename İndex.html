@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>زاوانتیس | مهاجرت تحصیلی به استانبول</title>
 
   <style>
@@ -42,6 +43,10 @@
       text-decoration: none;
       margin-right: 20px;
       font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d4af37;
     }
 
     .hero {
@@ -87,6 +92,8 @@
       border-radius: 6px;
       font-weight: bold;
       margin: 5px;
+      border: none;
+      cursor: pointer;
     }
 
     section {
@@ -119,12 +126,19 @@
       padding: 30px;
       border-radius: 12px;
       border: 1px solid #e5e7eb;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     .icon {
       color: #a58216;
       font-weight: bold;
       margin-bottom: 15px;
+      font-size: 18px;
     }
 
     .card h3 {
@@ -202,12 +216,62 @@
 
     .contact h2 {
       color: #0b1f33;
-      font-size: 30px;
+      font-size: 32px;
       margin-bottom: 12px;
     }
 
-    .contact p {
-      margin-bottom: 25px;
+    .contact > p {
+      color: #4b5563;
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      text-align: right;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 13px 15px;
+      margin-bottom: 15px;
+      border: 1px solid #d9dee5;
+      border-radius: 6px;
+      font-family: Tahoma, Arial, sans-serif;
+      font-size: 14px;
+      direction: rtl;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      outline: none;
+      border-color: #d4af37;
+    }
+
+    form textarea {
+      resize: vertical;
+    }
+
+    form button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      background: #0b1f33;
+      color: white;
+      font-family: Tahoma, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #132d47;
     }
 
     footer {
@@ -253,6 +317,10 @@
       nav a {
         margin: 0 5px;
       }
+
+      form {
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -266,11 +334,12 @@
     <a href="#services">خدمات</a>
     <a href="#why">چرا ما</a>
     <a href="#steps">مراحل</a>
-    <a href="#contact">تماس</a>
+    <a href="#contact">مشاوره</a>
   </nav>
 </header>
 
 <section class="hero">
+
   <div class="hero-content">
 
     <small>مهاجرت تحصیلی به ترکیه</small>
@@ -286,22 +355,32 @@
       در استانبول همراه شماست.
     </p>
 
-    <a class="button" href="https://wa.me/989216168664" target="_blank">
+    <a
+      class="button"
+      href="https://wa.me/989216168664"
+      target="_blank"
+    >
       مشاوره در واتساپ
     </a>
 
-    <a class="button" href="#services">
-      مشاهده خدمات
+    <a class="button" href="#contact">
+      درخواست مشاوره
     </a>
 
   </div>
+
 </section>
 
 <section id="services">
 
   <div class="title">
+
     <h2>خدمات زاوانتیس</h2>
-    <p>همراهی شما در تمام مراحل مسیر تحصیلی</p>
+
+    <p>
+      همراهی شما در تمام مراحل مسیر تحصیلی
+    </p>
+
   </div>
 
   <div class="services">
@@ -355,13 +434,19 @@
     </div>
 
   </div>
+
 </section>
 
 <section id="why" class="why">
 
   <div class="title">
+
     <h2>چرا زاوانتیس؟</h2>
-    <p>یک مسیر منظم و شفاف برای شروع تحصیل در استانبول</p>
+
+    <p>
+      یک مسیر منظم و شفاف برای شروع تحصیل در استانبول
+    </p>
+
   </div>
 
   <div class="why-grid">
@@ -387,13 +472,19 @@
     </div>
 
   </div>
+
 </section>
 
 <section id="steps">
 
   <div class="title">
+
     <h2>مراحل همکاری با زاوانتیس</h2>
-    <p>از مشاوره اولیه تا شروع زندگی دانشجویی</p>
+
+    <p>
+      از مشاوره اولیه تا شروع زندگی دانشجویی
+    </p>
+
   </div>
 
   <div class="steps">
@@ -423,24 +514,82 @@
     </div>
 
   </div>
+
 </section>
 
 <section id="contact" class="contact">
 
-  <h2>آماده شروع مسیر تحصیلی خود هستید؟</h2>
+  <h2>
+    درخواست مشاوره
+  </h2>
 
   <p>
-    برای بررسی شرایط خود و دریافت مشاوره با زاوانتیس در ارتباط باشید.
+    اطلاعات خود را وارد کنید تا کارشناسان زاوانتیس با شما تماس بگیرند.
   </p>
 
-  <a class="button" href="https://wa.me/989216168664" target="_blank">
-    ارتباط با زاوانتیس در واتساپ
+  <form
+    action="https://formspree.io/f/mrpzknnz"
+    method="POST"
+  >
+
+    <input
+      type="text"
+      name="name"
+      placeholder="نام و نام خانوادگی"
+      required
+    >
+
+    <input
+      type="tel"
+      name="phone"
+      placeholder="شماره تماس"
+      required
+    >
+
+    <input
+      type="email"
+      name="email"
+      placeholder="ایمیل"
+    >
+
+    <input
+      type="text"
+      name="study_level"
+      placeholder="مقطع تحصیلی موردنظر"
+    >
+
+    <input
+      type="text"
+      name="field"
+      placeholder="رشته موردنظر"
+    >
+
+    <textarea
+      name="message"
+      placeholder="توضیحات یا سوال شما"
+      rows="5"
+    ></textarea>
+
+    <button type="submit">
+      ارسال درخواست مشاوره
+    </button>
+
+  </form>
+
+  <a
+    class="button"
+    href="https://wa.me/989216168664"
+    target="_blank"
+  >
+    ارتباط مستقیم در واتساپ
   </a>
 
 </section>
 
 <footer>
+
   © ۲۰۲۶ زاوانتیس | تمامی حقوق محفوظ است
+
 </footer>
 
 </body>
