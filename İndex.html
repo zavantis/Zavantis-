@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>زاوانتیس | مهاجرت تحصیلی به استانبول</title>
 
   <style>
@@ -13,165 +13,292 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Tahoma, Arial, sans-serif;
-      background: #f7f8fa;
+      background: #f5f7fa;
       color: #172033;
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
     header {
-      background: #0d1b2a;
-      color: white;
-      padding: 20px 8%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #0b1f33;
+      padding: 18px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
     }
 
     .logo {
+      color: #d4af37;
       font-size: 28px;
       font-weight: bold;
-      color: #d4af37;
     }
 
     nav a {
       color: white;
       text-decoration: none;
       margin-right: 25px;
-      font-size: 15px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d4af37;
     }
 
     .hero {
-      min-height: 520px;
-      background: linear-gradient(
-        rgba(13, 27, 42, 0.85),
-        rgba(13, 27, 42, 0.85)
-      ),
-      url("https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1800&q=80")
-      center/cover;
-
+      min-height: 650px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
+      background:
+        linear-gradient(rgba(7, 25, 42, .82), rgba(7, 25, 42, .82)),
+        url("https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
       color: white;
-      padding: 50px 20px;
+      padding: 80px 7%;
     }
 
     .hero-content {
-      max-width: 800px;
+      max-width: 780px;
+    }
+
+    .hero small {
+      color: #d4af37;
+      font-size: 16px;
+      font-weight: bold;
     }
 
     .hero h1 {
-      font-size: 46px;
-      margin-bottom: 20px;
+      font-size: 52px;
+      line-height: 1.4;
+      margin: 15px 0 20px;
     }
 
     .hero p {
+      color: #e2e8f0;
       font-size: 20px;
-      margin-bottom: 30px;
-      color: #e5e7eb;
+      max-width: 650px;
+      margin-bottom: 35px;
     }
 
     .button {
       display: inline-block;
-      background: #d4af37;
-      color: #0d1b2a;
-      padding: 13px 30px;
+      padding: 14px 30px;
       border-radius: 6px;
+      background: #d4af37;
+      color: #0b1f33;
       text-decoration: none;
       font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .button-outline {
+      background: transparent;
+      border: 1px solid #d4af37;
+      color: white;
     }
 
     section {
-      padding: 70px 8%;
+      padding: 85px 7%;
     }
 
-    .section-title {
+    .title {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
-    .section-title h2 {
-      font-size: 32px;
-      color: #0d1b2a;
+    .title h2 {
+      font-size: 34px;
+      color: #0b1f33;
+      margin-bottom: 10px;
     }
 
-    .section-title p {
-      color: #666;
-      margin-top: 10px;
+    .title p {
+      color: #6b7280;
     }
 
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
     }
 
-    .service {
+    .card {
       background: white;
-      padding: 30px 20px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      padding: 32px 25px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      transition: .3s;
     }
 
-    .service h3 {
-      color: #0d1b2a;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      background: #f4ecd2;
+      color: #a58216;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 23px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      color: #0b1f33;
       margin-bottom: 10px;
     }
 
-    .service p {
-      color: #666;
+    .card p {
+      color: #687386;
       font-size: 14px;
     }
 
-    .about {
-      background: white;
-      text-align: center;
+    .why {
+      background: #0b1f33;
+      color: white;
     }
 
-    .about p {
-      max-width: 800px;
-      margin: auto;
-      color: #555;
+    .why .title h2 {
+      color: white;
+    }
+
+    .why .title p {
+      color: #cbd5e1;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .why-item {
+      text-align: center;
+      padding: 25px;
+    }
+
+    .why-item strong {
+      display: block;
+      color: #d4af37;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .step {
+      background: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .number {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #0b1f33;
+      color: #d4af37;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      font-weight: bold;
     }
 
     .contact {
-      background: #0d1b2a;
-      color: white;
+      background: #f4ecd2;
       text-align: center;
     }
 
     .contact h2 {
+      color: #0b1f33;
+      font-size: 34px;
       margin-bottom: 15px;
     }
 
+    .contact p {
+      color: #4b5563;
+      margin-bottom: 25px;
+    }
+
     footer {
-      background: #08121d;
-      color: #aaa;
+      background: #071522;
+      color: #9ca3af;
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       font-size: 13px;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid,
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+    }
+
+    @media (max-width: 650px) {
       header {
         flex-direction: column;
         gap: 15px;
       }
 
       nav a {
-        margin: 0 8px;
+        margin: 0 7px;
+      }
+
+      .hero {
+        min-height: 570px;
+        text-align: center;
       }
 
       .hero h1 {
-        font-size: 32px;
+        font-size: 34px;
       }
 
       .hero p {
         font-size: 17px;
+      }
+
+      .button {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .services,
+      .why-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 6%;
       }
     }
   </style>
@@ -179,119 +306,187 @@
 
 <body>
 
-  <header>
-    <div class="logo">زاوانتیس</div>
+<header>
+  <div class="logo">زاوانتیس</div>
 
-    <nav>
-      <a href="#services">خدمات</a>
-      <a href="#about">درباره ما</a>
-      <a href="#contact">تماس با ما</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="#services">خدمات</a>
+    <a href="#why">چرا زاوانتیس؟</a>
+    <a href="#steps">مراحل</a>
+    <a href="#contact">تماس</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <div class="hero-content">
+<section class="hero">
+  <div class="hero-content">
 
-      <h1>مهاجرت تحصیلی به استانبول</h1>
+    <small>مهاجرت تحصیلی به ترکیه</small>
 
-      <p>
-        همراه شما از انتخاب دانشگاه تا شروع زندگی دانشجویی در ترکیه
-      </p>
-
-      <a class="button" href="#contact">
-        درخواست مشاوره
-      </a>
-
-    </div>
-  </section>
-
-  <section id="services">
-
-    <div class="section-title">
-      <h2>خدمات زاوانتیس</h2>
-      <p>همراه شما در تمام مراحل مهاجرت تحصیلی</p>
-    </div>
-
-    <div class="services">
-
-      <div class="service">
-        <h3>پذیرش دانشگاه</h3>
-        <p>
-          راهنمایی و همراهی برای انتخاب دانشگاه و دریافت پذیرش تحصیلی
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>انتخاب رشته</h3>
-        <p>
-          بررسی شرایط شما و انتخاب رشته و دانشگاه مناسب
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>ترجمه مدارک</h3>
-        <p>
-          راهنمایی برای آماده‌سازی و ترجمه مدارک مورد نیاز
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>ویزای تحصیلی</h3>
-        <p>
-          راهنمایی و همراهی در مراحل مربوط به ویزای تحصیلی
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>اقامت دانشجویی</h3>
-        <p>
-          راهنمایی در روند دریافت اقامت دانشجویی در ترکیه
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>خوابگاه و اقامت</h3>
-        <p>
-          کمک در انتخاب محل اقامت مناسب برای دانشجویان
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="about" class="about">
-
-    <div class="section-title">
-      <h2>درباره زاوانتیس</h2>
-    </div>
+    <h1>
+      مسیر تحصیل شما در استانبول،
+      از ایران تا دانشگاه
+    </h1>
 
     <p>
-      زاوانتیس با هدف ارائه خدمات تخصصی به متقاضیان تحصیل
-      در ترکیه فعالیت می‌کند و تلاش دارد مسیر مهاجرت تحصیلی
-      را برای دانشجویان ایرانی ساده‌تر و شفاف‌تر کند.
+      زاوانتیس در مسیر انتخاب دانشگاه، پذیرش تحصیلی،
+      آماده‌سازی مدارک، اقامت و شروع زندگی دانشجویی
+      در استانبول همراه شماست.
     </p>
 
-  </section>
+    <a class="button" href="#contact">درخواست مشاوره</a>
 
-  <section id="contact" class="contact">
-
-    <h2>برای مشاوره با ما در ارتباط باشید</h2>
-
-    <p>
-      برای بررسی شرایط تحصیلی خود با زاوانتیس تماس بگیرید.
-    </p>
-
-    <br>
-
-    <a class="button" href="tel:+989000000000">
-      تماس با زاوانتیس
+    <a class="button button-outline" href="#services">
+      مشاهده خدمات
     </a>
 
-  </section>
+  </div>
+</section>
 
-  <footer>
-    © 2026 زاوانتیس - تمامی حقوق محفوظ است
-  </footer>
+<section id="services">
+
+  <div class="title">
+    <h2>خدمات زاوانتیس</h2>
+    <p>همراهی شما در تمام مراحل مسیر تحصیلی</p>
+  </div>
+
+  <div class="services">
+
+    <div class="card">
+      <div class="icon">01</div>
+      <h3>مشاوره تحصیلی</h3>
+      <p>
+        بررسی شرایط تحصیلی شما و ارائه مسیر مناسب برای ادامه تحصیل در ترکیه.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">02</div>
+      <h3>انتخاب دانشگاه و رشته</h3>
+      <p>
+        بررسی دانشگاه‌ها و رشته‌های مناسب بر اساس شرایط و اهداف شما.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">03</div>
+      <h3>پذیرش دانشگاه</h3>
+      <p>
+        همراهی در آماده‌سازی پرونده و مراحل درخواست پذیرش دانشگاه.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">04</div>
+      <h3>آماده‌سازی مدارک</h3>
+      <p>
+        راهنمایی برای آماده‌سازی، ترجمه و تکمیل مدارک مورد نیاز.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">05</div>
+      <h3>ویزا و اقامت</h3>
+      <p>
+        راهنمایی در مراحل مربوط به ویزا و اقامت دانشجویی در ترکیه.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">06</div>
+      <h3>خدمات پس از ورود</h3>
+      <p>
+        همراهی برای شروع زندگی دانشجویی، اقامت و امور اولیه در استانبول.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="why" class="why">
+
+  <div class="title">
+    <h2>چرا زاوانتیس؟</h2>
+    <p>هدف ما ایجاد یک مسیر شفاف و منظم برای شماست.</p>
+  </div>
+
+  <div class="why-grid">
+
+    <div class="why-item">
+      <strong>مشاوره</strong>
+      بررسی شرایط و اهداف شما
+    </div>
+
+    <div class="why-item">
+      <strong>شفافیت</strong>
+      ارائه اطلاعات روشن درباره مراحل
+    </div>
+
+    <div class="why-item">
+      <strong>همراهی</strong>
+      پشتیبانی در مراحل مختلف مسیر
+    </div>
+
+    <div class="why-item">
+      <strong>استانبول</strong>
+      تمرکز تخصصی بر تحصیل در استانبول
+    </div>
+
+  </div>
+</section>
+
+<section id="steps">
+
+  <div class="title">
+    <h2>مراحل همکاری با زاوانتیس</h2>
+    <p>از مشاوره اولیه تا شروع زندگی دانشجویی</p>
+  </div>
+
+  <div class="steps">
+
+    <div class="step">
+      <div class="number">۱</div>
+      <h3>مشاوره</h3>
+      <p>بررسی شرایط و اهداف تحصیلی شما</p>
+    </div>
+
+    <div class="step">
+      <div class="number">۲</div>
+      <h3>انتخاب</h3>
+      <p>انتخاب دانشگاه و رشته مناسب</p>
+    </div>
+
+    <div class="step">
+      <div class="number">۳</div>
+      <h3>پذیرش</h3>
+      <p>آماده‌سازی پرونده و پیگیری پذیرش</p>
+    </div>
+
+    <div class="step">
+      <div class="number">۴</div>
+      <h3>ورود به ترکیه</h3>
+      <p>همراهی برای شروع زندگی دانشجویی</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+
+  <h2>آماده شروع مسیر تحصیلی خود هستید؟</h2>
+
+  <p>
+    برای بررسی شرایط خود و دریافت مشاوره با زاوانتیس در ارتباط باشید.
+  </p>
+
+  <a class="button" href="tel:+989000000000">
+    تماس با زاوانتیس
+  </a>
+
+</section>
+
+<footer>
+  © 2026 زاوانتیس | تمامی حقوق محفوظ است
+</footer>
 
 </body>
 </html>
